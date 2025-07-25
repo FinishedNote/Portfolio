@@ -1,0 +1,74 @@
+@use "../abstracts/mixins" as *;
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: var(--primary);
+  overflow-x: hidden;
+}
+.main {
+  width: 100vw;
+  height: auto;
+  padding: 0 300px 0 300px;
+  display: flex;
+  justify-content: center;
+}
+header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  nav {
+    ul {
+      display: flex;
+      gap: 1em;
+
+      li {
+        cursor: pointer;
+        color: var(--text-1);
+        line-height: 1;
+      }
+    }
+  }
+  .contactButtons {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+
+    a {
+      @include button;
+    }
+  }
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #dbdbdb;
+}
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a0a0a0;
+}
