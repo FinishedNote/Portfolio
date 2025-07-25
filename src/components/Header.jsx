@@ -1,3 +1,5 @@
+import github from "../assets/GithubIcon.png";
+
 const Header = () => {
   return (
     <header>
@@ -10,7 +12,9 @@ const Header = () => {
       </nav>
       <div className="contactButtons">
         <li>Contact</li>
-        <a href="https://github.com/FinishedNote">Github</a>
+        <a href="https://github.com/FinishedNote" target="_blank">
+          <img src={github} alt="Github icon" /> Github
+        </a>
       </div>
     </header>
   );
