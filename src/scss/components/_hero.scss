@@ -58,6 +58,9 @@
     justify-content: center;
     align-items: center;
   }
+  @media screen and (max-width: $breakpoint-xxl) {
+    flex-direction: column-reverse;
+  }
 }
 @property --angle {
   syntax: "<angle>";

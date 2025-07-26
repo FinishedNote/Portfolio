@@ -1,0 +1,101 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.skills-section {
+  width: 100%;
+  min-height: calc(100vh);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+
+  .title {
+    h2 {
+      font-size: var(--text-xxl);
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: var(--text-1);
+    }
+  }
+  .skills {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+
+    .skill-box {
+      width: 380px;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+
+      .title {
+        h3 {
+          font-size: var(--text-xl);
+          font-weight: 500;
+          color: var(--text-1);
+        }
+      }
+      .icons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        li {
+          width: 80px;
+          height: 80px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 10px;
+          border: 1px solid #ccc;
+          background: var(--secondary);
+          transition: transform 200ms ease-in-out, filter 200ms ease-in-out;
+
+          &:hover {
+            transform: scale(1.05);
+            filter: brightness(0.9);
+          }
+        }
+      }
+      .react {
+        position: relative;
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          background-image: conic-gradient(
+            from var(--angle),
+            #0066ff,
+            #ff32d6,
+            #ffc400,
+            #00ff80,
+            #0066ff
+          );
+          top: 50%;
+          left: 50%;
+          translate: -50% -50%;
+          z-index: -1;
+          padding: 3px;
+          border-radius: 12px;
+          animation: 3s spin linear infinite;
+        }
+      }
+    }
+  }
+}
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
