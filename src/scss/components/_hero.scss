@@ -1,0 +1,74 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.hero-section {
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  height: auto;
+  display: flex;
+  .about-part {
+    width: 50%;
+    height: calc(1080px / 2);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 1;
+    gap: 1.5em;
+
+    h1 {
+      font-size: var(--text-huge);
+      font-weight: 900;
+      letter-spacing: 2px;
+      color: var(--text-1);
+    }
+    p {
+      color: var(--text-2);
+      font-size: var(--text-l);
+    }
+    button {
+      position: relative;
+      @include button;
+      cursor: pointer;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-image: conic-gradient(
+          from var(--angle),
+          transparent 60%,
+          var(--action-1)
+        );
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        z-index: -1;
+        padding: 3px;
+        border-radius: 8px;
+        animation: 3s spin linear infinite;
+      }
+    }
+  }
+  .model-part {
+    width: 50%;
+    height: calc(1080px / 2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}

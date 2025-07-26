@@ -3,11 +3,11 @@
   --primary: #ffffff;
   --secondary: #f4f4f4;
   --Terciary: #f4f4f4;
-  --action-1: #0d8ef8;
+  --action-1: #4dbfd6;
   --action-2: #7eaafc;
   --action-3: #00328f;
   --text-1: #1a1a1a;
-  --text-2: #f4f4f4b8;
+  --text-2: #999999;
   --border: #2a2a2a;
   // sizes
   font-size: 16px;
@@ -18,6 +18,7 @@
   --text-l: 1.25rem;
   --text-xl: 1.75rem;
   --text-xxl: 2.5rem;
+  --text-huge: 4rem;
   // margin
   --margin-xxs: 0.25rem;
   --margin-xs: 0.5rem;
@@ -26,6 +27,7 @@
   --margin-l: 1.25rem;
   --margin-xl: 1.75rem;
   --margin-xxl: 2.5rem;
+  --margin-huge: 4rem;
 }
 :root[type="dark"] {
   // colors dark

@@ -1,8 +1,7 @@
 // abstracts
 @import url("./abstracts/_variables.scss");
-
 // base
 @import url("./base/_global.scss");
 // components
-
-// page
+@import url("./components/_header.scss");
+@import url("./components/_hero.scss");

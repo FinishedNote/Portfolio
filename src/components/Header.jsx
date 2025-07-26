@@ -1,8 +1,12 @@
+import { Menu } from "lucide-react";
 import github from "../assets/GithubIcon.png";
 
 const Header = () => {
   return (
     <header>
+      <div className="menu">
+        <Menu />
+      </div>
       <nav className="navbar">
         <ul>
           <li>Home</li>

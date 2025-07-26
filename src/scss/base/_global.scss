@@ -29,7 +29,8 @@ body {
   height: auto;
   padding: 0 300px 0 300px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 
   @media screen and (max-width: $breakpoint-xxl) {
     padding: 0 200px 0 200px;
@@ -42,46 +43,6 @@ body {
   }
   @media screen and (max-width: $breakpoint-sm) {
     padding: 0;
-  }
-}
-header {
-  width: 100%;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  nav {
-    ul {
-      display: flex;
-      gap: 1em;
-
-      li {
-        cursor: pointer;
-        color: var(--text-1);
-        line-height: 1;
-      }
-    }
-  }
-
-  .contactButtons {
-    display: flex;
-    align-items: center;
-    gap: 1em;
-
-    li {
-      cursor: pointer;
-      color: var(--text-1);
-      line-height: 1;
-    }
-
-    a {
-      @include button;
-    }
-  }
-
-  @media screen and (max-width: $breakpoint-sm) {
-    padding: 0 10px;
   }
 }
 ::-webkit-scrollbar {
@@ -97,29 +58,3 @@ header {
 ::-webkit-scrollbar-thumb:hover {
   background: #a0a0a0;
 }
-/*
-  // Breakpoint XXL (1400px)
-  @media screen and (max-width: var(--xxl)) {
-    padding: 0 200px 0 200px;
-  }
-
-  // Breakpoint XL (1200px)
-  @media screen and (max-width: var(--xl)) {
-    padding: 0 100px 0 100px;
-  }
-
-  // Breakpoint LG (992px)
-  @media screen and (max-width: var(--lg)) {
-    padding: 0 50px 0 50px;
-  }
-
-  // Breakpoint MD (768px) - Tablettes
-  @media screen and (max-width: var(--md)) {
-    padding: 0 30px 0 30px;
-  }
-
-  // Breakpoint SM (576px) - Mobiles
-  @media screen and (max-width: var(--sm)) {
-    padding: 0 20px 0 20px;
-  }
-*/
