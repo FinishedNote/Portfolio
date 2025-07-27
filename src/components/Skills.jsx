@@ -8,6 +8,7 @@ import reactIcon from "../assets/react.png";
 import reduxIcon from "../assets/redux.png";
 import nextIcon from "../assets/next.png";
 import svelteIcon from "../assets/svelte.png";
+import viewIcon from "../assets/view.png";
 import nodeIcon from "../assets/node.png";
 import djangoIcon from "../assets/django.png";
 import postmanIcon from "../assets/postman.png";
@@ -62,6 +63,9 @@ const Skills = () => {
             </li>
             <li>
               <img src={svelteIcon} alt="svelte icon" />
+            </li>
+            <li>
+              <img src={viewIcon} alt="view icon" />
             </li>
           </ul>
         </div>
