@@ -22,7 +22,12 @@ export default function Scene() {
     <Canvas camera={{ position: [0, 1, 5] }} className="canvas">
       <ambientLight intensity={1} />
       <directionalLight position={[3, 3, 1]} />
-      <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={1} />
+      <OrbitControls
+        enablePan={false}
+        enableZoom={false}
+        autoRotate
+        autoRotateSpeed={1}
+      />
 
       <Suspense fallback={null}>
         <Model />
