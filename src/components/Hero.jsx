@@ -5,7 +5,7 @@ import gsap from "gsap";
 
 const Hero = () => {
   useGSAP(() => {
-    const heroSplit = new SplitText(".title", {
+    const heroSplit = new SplitText(".main-title", {
       type: "chars, words",
     });
 
@@ -34,7 +34,7 @@ const Hero = () => {
   return (
     <div className="hero-section">
       <div className="about-part">
-        <h1 className="title">Miroir Raphaël</h1>
+        <h1 className="title main-title">Miroir Raphaël</h1>
         <p className="subtitle">
           Développeur web spécialisé React. J’allie performance, esthétique et
           interactivité dans des projets modernes et soignés.

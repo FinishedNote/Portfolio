@@ -9,12 +9,19 @@
   flex-direction: column;
   gap: 3em;
 
+  @media screen and (max-width: $breakpoint-lg) {
+    padding-top: 10rem;
+  }
   .title {
     h2 {
       font-size: var(--text-xxl);
       font-weight: 600;
       letter-spacing: 2px;
       color: var(--text-1);
+
+      @media screen and (max-width: $breakpoint-lg) {
+        text-align: center;
+      }
     }
   }
   .skills {
@@ -22,6 +29,13 @@
     height: auto;
     display: flex;
     justify-content: space-between;
+    gap: 1em;
+
+    @media screen and (max-width: $breakpoint-lg) {
+      flex-direction: column;
+      align-items: center;
+      gap: 4em;
+    }
 
     .skill-box {
       width: 380px;
@@ -30,6 +44,9 @@
       flex-direction: column;
       gap: 2em;
 
+      @media screen and (max-width: $breakpoint-lg) {
+        text-align: center;
+      }
       .title {
         h3 {
           font-size: var(--text-xl);
@@ -41,6 +58,10 @@
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
+
+        @media screen and (max-width: $breakpoint-lg) {
+          justify-content: center;
+        }
         li {
           width: 80px;
           height: 80px;
