@@ -5,29 +5,32 @@ import gsap from "gsap";
 
 const Hero = () => {
   useGSAP(() => {
-    const heroSplit = new SplitText(".main-title", {
-      type: "chars, words",
-    });
+    // Attendre que les polices soient chargées
+    document.fonts.ready.then(() => {
+      const heroSplit = new SplitText(".main-title", {
+        type: "chars, words",
+      });
 
-    const paragraphSplit = new SplitText(".subtitle", {
-      type: "lines",
-    });
+      const paragraphSplit = new SplitText(".subtitle", {
+        type: "lines",
+      });
 
-    gsap.from(heroSplit.chars, {
-      opacity: 0,
-      yPercent: 100,
-      duration: 0.5,
-      ease: "expo.out",
-      stagger: 0.06,
-    });
+      gsap.from(heroSplit.chars, {
+        opacity: 0,
+        yPercent: 100,
+        duration: 0.5,
+        ease: "expo.out",
+        stagger: 0.06,
+      });
 
-    gsap.from(paragraphSplit.lines, {
-      opacity: 0,
-      yPercent: 100,
-      duration: 0.3,
-      ease: "expo.out",
-      stagger: 0.06,
-      delay: 1,
+      gsap.from(paragraphSplit.lines, {
+        opacity: 0,
+        yPercent: 100,
+        duration: 0.3,
+        ease: "expo.out",
+        stagger: 0.06,
+        delay: 1,
+      });
     });
   });
 
