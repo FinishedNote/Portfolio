@@ -12,18 +12,6 @@
   @media screen and (max-width: $breakpoint-lg) {
     padding-top: 10rem;
   }
-  .title {
-    h2 {
-      font-size: var(--text-xxl);
-      font-weight: 600;
-      letter-spacing: 2px;
-      color: var(--text-1);
-
-      @media screen and (max-width: $breakpoint-lg) {
-        text-align: center;
-      }
-    }
-  }
   .skills {
     width: 100%;
     height: auto;
