@@ -2,6 +2,7 @@ import Scene from "./Scene";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/all";
 import gsap from "gsap";
+import { Element } from "react-scroll";
 
 const Hero = () => {
   useGSAP(() => {
@@ -35,7 +36,7 @@ const Hero = () => {
   });
 
   return (
-    <div className="hero-section">
+    <Element className="hero-section" name="section1">
       <div className="about-part">
         <h1 className="title main-title">Miroir Raphaël</h1>
         <p className="subtitle">
@@ -49,7 +50,7 @@ const Hero = () => {
       <div className="model-part">
         <Scene />
       </div>
-    </div>
+    </Element>
   );
 };
 

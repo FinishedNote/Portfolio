@@ -21,10 +21,11 @@ import flutterIcon from "../assets/flutter.png";
 import linuxIcon from "../assets/linux.png";
 import vercelIcon from "../assets/vercel.png";
 import gitIcon from "../assets/git.png";
+import { Element } from "react-scroll";
 
 const Skills = () => {
   return (
-    <div className="skills-section">
+    <Element className="skills-section" name="section2">
       <div className="title">
         <h2>Mes compétences</h2>
       </div>
@@ -120,7 +121,7 @@ const Skills = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </Element>
   );
 };
 
