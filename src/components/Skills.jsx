@@ -53,7 +53,7 @@ const Skills = () => {
             <li>
               <img src={tslIcon} alt="ts icon" />
             </li>
-            <li className="react">
+            <li>
               <img src={reactIcon} alt="react icon" />
             </li>
             <li>

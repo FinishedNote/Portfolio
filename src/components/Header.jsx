@@ -4,21 +4,20 @@ import { Link } from "react-scroll";
 
 const Header = () => {
   return (
-    <header>
+    <header name="header">
       <div className="menu">
         <Menu />
       </div>
       <nav className="navbar">
         <ul>
-          <li>Accueil</li>
           <li>
             <Link to="section2" smooth={true} duration={500}>
-              Compétences
+              Mes compétences
             </Link>
           </li>
           <li>
             <Link to="section3" smooth={true} duration={500}>
-              Projets
+              Mes projets
             </Link>
           </li>
         </ul>

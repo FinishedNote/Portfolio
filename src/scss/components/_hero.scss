@@ -3,7 +3,8 @@
 
 .hero-section {
   width: 100%;
-  min-height: calc(100vh - 80px);
+  min-height: 100vh;
+  margin-top: 80px;
   height: auto;
   display: flex;
   .about-part {
